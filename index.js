@@ -3,7 +3,7 @@
  */
 //步数列表
 var stepList = {
-	step: [2000, 5000, 3000, 2563, 125, 22521, 621],	//字符串
+	step: [5900, 5000, 3000, 2563, 125, 22521, 9632],	//字符串
 	barHeight: [],
 	stepTop: 20000,
 	showingStepIdx: 6,	//显示步数的index
@@ -13,10 +13,9 @@ var stepList = {
 /*	设置图表
  * */
 function setGraph($el) {
-	var $stepToday = $el.find('.graph-head-today span');
-	var $step = $el.find('.graph-content em');
-	var $barWrap = $el.find('.graph-content li');
-	var $bar = $el.find('.graph-content i');
+	var $step = $el.find('.graph-content-bars em');
+	var $barWrap = $el.find('.graph-content-bars li');
+	var $bar = $el.find('.graph-content-bars i');
 	var $date = $el.find('.graph-date li');
 	//根据步数循环,产生数据
 	stepList.step.forEach(function (item, idx) {
@@ -35,13 +34,11 @@ function setGraph($el) {
 		//日期
 		$date.eq(idx).text(stepList.date[idx]);
 	});
-	//当天步数
-	$stepToday.text(stepList.step[6]);
 	/*	事件绑定:点击柱子移动步数位置
 	* */
 	$barWrap.click(function () {
 		$(this).find('em').css({
-			top: '2%'
+			top: '2%',
 		});
 		$(this).siblings('li').find('em').css({
 			top: '100%'
