@@ -1,6 +1,6 @@
 /*---初始化---*/
 html,body{
-    font-size: 120px;
+    font-size: 100px;
 }
 div, i, em, ul, li{
     margin: 0;
@@ -13,8 +13,8 @@ li{
 /*---样式---*/
 /*外层*/
 .graph{
-    width: 93%;
-    padding-bottom: 0.2rem;
+    width: 98%;
+    padding-bottom: 0.5rem;
     background: #1c8d9f; /* 一些不支持背景渐变的浏览器 */
     background:-webkit-gradient(linear, 0 0, right bottom, from(#2cbb85), to(#1c8d9f));
     border-radius: 0.08rem;
@@ -43,38 +43,38 @@ li{
 /*柱状图*/
 .graph-content{
     width: 90%;
-    margin: 0 0 0 2%;
+    margin: 0 0 0 4%;
     height: 3rem;
     background:-webkit-gradient(linear, 0 0, 0 bottom, from(transparent), to(rgba(255,255,255,.1)));
     position: relative;
 }
 /*y轴线*/
-.graph-content-y{
+.graph-content-x{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left:0;
 }
-.graph-content-y li{
+.graph-content-x li{
     height: 0;
     width: 100%;
     left: 0;
     position: absolute;
 }
-.graph-content-y li:nth-child(1){
+.graph-content-x li:nth-child(1){
     top: 0;
     border-bottom: 0.03rem dotted #fff;
 }
-.graph-content-y li:nth-child(2){
+.graph-content-x li:nth-child(2){
     top: 25%;
     border-bottom: 0.03rem dotted rgba(255,255,255,0.5);
 }
-.graph-content-y li:nth-child(3){
+.graph-content-x li:nth-child(3){
     top: 50%;
     border-bottom: 0.03rem dotted rgba(255,255,255,0.5);
 }
-.graph-content-y li i{
+.graph-content-x li i{
     font-style: normal;
     color: #fff;
     height: 0.3rem;
@@ -88,48 +88,54 @@ li{
 .graph-content-bars{
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 .graph-content-bars li{
-    width: 14.28%;
     height: 100%;
     float: left;
     position: relative;
 }
 .graph-content-bars li i{
     display: block;
-    width: 16%;
     height: 0;
     border-radius: 0.1rem;
     background: rgba(255,255,255,.5);
     position: absolute;
-    left: 42%;
     bottom: 0;
     transition: height 500ms;
 }
 .graph-content-bars li em{
     display: block;
     font-style: normal;
-    width: 100%;
     position: absolute;
+    text-align: center;
     left: 50%;
-    margin-left: -50%;
+    width: 1.6rem;
+    margin-left: -0.8rem;
     color: #fff;
     font-size: 0.3rem;
-    text-align: center;
     top: 100%;
-    transition: top 500ms;
+    transition: all 500ms;
+    opacity: 0;
+}
+.graph-content-bars li b{
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    border-right: 0.03rem dotted rgba(255,255,255,0.5);
+    margin-left: -0.015rem;
+    display: none;
 }
 /*日期*/
 .graph-date{
     width: 90%;
-    margin: 0 0 0 2%;
-    overflow: hidden;
+    margin: 0 0 0 4%;
 }
 .graph-date li{
-    width: 14.28%;
     font-size: 0.3rem;
     color: #fff;
     text-align: center;
     float: left;
+    height: 0.4rem;
+    line-height: 0.4rem;
 }
