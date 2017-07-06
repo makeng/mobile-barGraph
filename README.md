@@ -5,4 +5,5 @@
 	2.需要等比例缩放的同学可以自行添加remjs。
 	3.新增30天的表格和y轴线。
 	
-![图示](http://img.027cgb.cn/20170706/2017766871775731906.png)
+![图示](https://ws1.sinaimg.cn/large/8a6df995gy1fh9ztskevwj20bh0at74o.jpg)
+
