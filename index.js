@@ -45,7 +45,7 @@ function setGraph($el, stepList, barWidthPercent) {
 			stepList.barHeight[idx] + ';width:' + barWidthPercent + '%;left:' + ((100-barWidthPercent)/2) + '%' +
 			'"></i>';
 		var stepStr = '<em>' + stepNum + '</em>';
-		$bars.append('<li onclick="barWrapClick(' + $el.index() + ',' + idx + ')" style="width:' + width + '">' +
+		$bars.append('<li onclick="barWrapClick(' + $el.index($el.className) + ',' + idx + ')" style="width:' + width + '">' +
 			barStr + stepStr +
 			'<b></b></li>');	//添加元素，带点击事件
 		//日期
